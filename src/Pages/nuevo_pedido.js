@@ -25,10 +25,12 @@ export default class Pedido extends React.Component {
 
     ingredientes_extras = (e) => {
         let array = [];
-
-        console.log("Recibido: "+ e);
         array = e;
-        array.splice(1, 0, '  con : ');
+        if (array.length === 1)
+            array.splice(0, 0, '1  ');
+        
+        else
+            array.splice(1, 0, '  con : ');
         
         pedido_completo[i] = array; 
         i++;
@@ -44,6 +46,8 @@ export default class Pedido extends React.Component {
 
                 <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
                 <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
+                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
+
                 <span className="total">Total: ${this.state.precio_total}</span>
 
                 <div className="listar_pedido">

@@ -6,6 +6,7 @@ import less from '../Imagenes/iconos/less.png';
 
 let ingredientes_guardados = [];
 let precio_total = 0;
+
 export default class Pedido extends React.Component {
     constructor(props){
         super(props);
@@ -38,6 +39,12 @@ export default class Pedido extends React.Component {
             })
             this.state.mostrar_boton = "si_mostrar";
         }
+        else{
+            this.setState({
+                mostrar_boton : "si_mostrar"
+            })
+        }
+    
     }
 
     cerrar_lista = () => {
