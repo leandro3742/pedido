@@ -40,7 +40,7 @@ export default class Pedido extends React.Component {
     
         return(
             <div className="pedido">
-                <a href="/pedido"> <button className="nuevo_pedido">Iniciar nuevo pedido</button> </a>
+                <a href="/pedido"> <button className="boton_nuevo_inicio">Iniciar nuevo pedido</button> </a>
 
                 <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
                 <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />

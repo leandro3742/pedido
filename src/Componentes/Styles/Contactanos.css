@@ -2,7 +2,13 @@
     display: flex;
     justify-content: center;
 }
+    /* color: #C1B3B3; */
+
 .boton-a{
+    font-family: 'Fredoka One', cursive;
+    float: left;
+    font-size: 18px;
+    margin-top: 15px;
     outline: none;
     padding: 5px 10px 5px 10px;
     border-radius: 25px 5px 25px 5px;
