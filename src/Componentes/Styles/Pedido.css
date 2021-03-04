@@ -18,7 +18,8 @@ span{
 
 
 .pedido-mini-container{
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    padding-top: 50px;
     display: grid;
     align-items: center;
     justify-content: center;

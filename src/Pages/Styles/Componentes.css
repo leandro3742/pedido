@@ -1,5 +1,6 @@
 
 .boton_nuevo_inicio {
+    position: fixed ;
     font-family: 'Akaya Telivigala', cursive;
 	margin-top: 5px;
     margin-left: 5px;

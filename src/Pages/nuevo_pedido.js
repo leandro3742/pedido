@@ -47,6 +47,12 @@ export default class Pedido extends React.Component {
                 <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
                 <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
                 <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
+                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
+                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
+                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
+                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
+                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
+                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
 
                 <span className="total">Total: ${this.state.precio_total}</span>
 
