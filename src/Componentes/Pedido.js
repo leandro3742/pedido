@@ -2,6 +2,8 @@ import React from 'react';
 import './Styles/Pedido.css';
 
 import add from '../Imagenes/iconos/add.png';
+import carro from '../Imagenes/iconos/carro.png';
+
 import less from '../Imagenes/iconos/less.png';
 
 let ingredientes_guardados = [];
@@ -142,7 +144,7 @@ export default class Pedido extends React.Component {
                     <div className="pedido-mini-container">
                         <div className="arriba">
                             <img className="pedido-imagen" src={this.state.imagen} alt=""/>
-                            <img className="icono" src={add} onClick={()=>this.mostrar_pedido()}/>
+                            <img className="icono" src={carro} onClick={()=>this.mostrar_pedido()}/>
                         </div>
                         <div className="precio"> <span>${this.state.precio}</span> </div>
                     </div>

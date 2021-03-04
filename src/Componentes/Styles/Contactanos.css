@@ -5,7 +5,6 @@
     /* color: #C1B3B3; */
 
 .boton-a{
-    border-color: #A1E3F3;
     font-family: 'Akaya Telivigala', cursive;
     font-size: 18px;
     margin-top: 15px;
@@ -14,6 +13,7 @@
     border-radius: 25px 5px 25px 5px;
     color: whitesmoke;
     background: linear-gradient(to top, #53C7E3 , #A1E3F3); 
+    border-color: #A1E3F3;
     /* background: linear-gradient(to left, #e53935 , #e35d5b);  */
 
 }
