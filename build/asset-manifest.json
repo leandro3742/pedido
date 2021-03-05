@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6d33934.chunk.css",
+    "main.css": "/static/css/main.4031ee28.chunk.css",
     "main.js": "/static/js/main.4f0391a7.chunk.js",
     "main.js.map": "/static/js/main.4f0391a7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0a073d26.js",
@@ -8,18 +8,18 @@
     "static/js/2.34f2f12e.chunk.js": "/static/js/2.34f2f12e.chunk.js",
     "static/js/2.34f2f12e.chunk.js.map": "/static/js/2.34f2f12e.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.d6d33934.chunk.css.map": "/static/css/main.d6d33934.chunk.css.map",
+    "static/css/main.4031ee28.chunk.css.map": "/static/css/main.4031ee28.chunk.css.map",
     "static/js/2.34f2f12e.chunk.js.LICENSE.txt": "/static/js/2.34f2f12e.chunk.js.LICENSE.txt",
     "static/media/brownie.03788d86.png": "/static/media/brownie.03788d86.png",
+    "static/media/layout.css": "/static/media/pizza-fondo-grande.6851e104.jpg",
     "static/media/hamburguesa.8d0b876f.jpg": "/static/media/hamburguesa.8d0b876f.jpg",
-    "static/media/layout.css": "/static/media/pizza-fondo.8a936a8f.jpg",
     "static/media/pizza.8fbbd3f0.jpg": "/static/media/pizza.8fbbd3f0.jpg",
     "static/media/restaurante.def4cf41.jpg": "/static/media/restaurante.def4cf41.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.0a073d26.js",
     "static/js/2.34f2f12e.chunk.js",
-    "static/css/main.d6d33934.chunk.css",
+    "static/css/main.4031ee28.chunk.css",
     "static/js/main.4f0391a7.chunk.js"
   ]
 }

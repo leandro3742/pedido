@@ -1,6 +1,7 @@
 /*NECESARIO NO TOCAR*/
 span{
     font-family: 'RocknRoll One', sans-serif;
+    color: white;
 }
 .pedido-imagen.cover{
     object-fit: cover;
@@ -18,7 +19,7 @@ span{
 
 
 .pedido-mini-container{
-    /* margin-top: 50px; */
+    /* margin-top: 50px;*/
     padding-top: 50px;
     display: grid;
     align-items: center;
@@ -61,7 +62,7 @@ span{
 
 /* ACA VA MOSTRAR_PEDIDO */
 .preguntar_por_ingredientes_extras{
-    height: 90px;
+    height: 60px;
     background-color: rgba(0, 0, 0, .7);
     color: white;
     text-align: center;
