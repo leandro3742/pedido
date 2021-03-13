@@ -24,23 +24,49 @@
     border-radius: 0px 25px 25px ;
 } */
 
+
+.titulos-con-flechas{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .total{
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 2.5%;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px 25px 25px 5px;
+    border: outset;
+
     display: flex;
     justify-content: center;
     font-size: 21px;
 }
+.flechas{
+    margin-left: 10px;
+    margin-top: -10px;
+    font-size: 25px;
+}
+.titulos{
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;    
+}
 
 .listar_pedido{
     margin-top: 15px;
+    margin-bottom: 75px;
     border-radius: 25px 5px 25px;
     background-color: rgba(0, 0, 0, 0.7);
 }
 .lista_pedido{
     margin: 10px;
     text-align: center;
-}
-.boton_contactanos{
-    border-radius: 25px 5px 25px 5px;
-    display: flex;
-    justify-content: center;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { pizza, burger, brownie } from './datos';
 import COMIDA from '../Componentes/Pedido';
 import Contactanos from '../Componentes/Contactanos';
@@ -6,24 +6,16 @@ import './Styles/Componentes.css';
 let pedido_completo = [];
 let i = 0;
 
-export default class Pedido extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            precio_total : 0,
-            ingredientes_extras : ''
-        }
-    }
-    
-    //Recibe el precio de cada pedido y lo suma
-    precio_del_pedido = (e) => {
+const Pedido = () => {
+    const [precio_total, setPrecio_total] = useState(0);
+    // const [ingredientes_extras, setIngredientes_extras] = useState('');
+
+    function precio_del_pedido(e){
         console.log(e);
-        this.setState({
-            precio_total : this.state.precio_total + e
-        });
+        setPrecio_total(precio_total + e);
     }
 
-    ingredientes_extras = (e) => {
+    function ingredientes_extras(e){
         let array = [];
         array = e;
         if (array.length === 1)
@@ -36,37 +28,125 @@ export default class Pedido extends React.Component {
         i++;
         
     }
+    const platos =
+        <div>
+            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
+            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
+            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
+        </div>;
 
-
-    render(){
+    const bebidas =
+        <div>
+            <h5>Bebidas</h5>
+        </div>
     
-        return(
-            <div className="pedido">
-                <a href="/pedido"> <button className="boton_nuevo_inicio">Iniciar nuevo pedido</button> </a>
+    const postres = 
+        <div>
+            <h7>Postres</h7>
+        </div>
 
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
-                <COMIDA ingredientes_extras={this.ingredientes_extras} precio_del_pedido={this.precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
 
-                <span className="total">Total: ${this.state.precio_total}</span>
+    const [postre, setPostre] = useState(true);
+    const [mostrar_postre, setMostrar_postre] = useState(<div></div>);
+    const [flecha_postre, setFlecha_postre] = useState(<span className="flechas">➘ ➘ ➘</span>)
 
-                <div className="listar_pedido">
-                    {pedido_completo.map(ingredientes_elegidos =>
-                        <div className="ingredientes_elegidos">
-                            <li className="lista_pedido">{ingredientes_elegidos}</li> 
-                        </div>
-                    )}
-                </div>
-                <Contactanos className="boton_contactanos" precio = {this.state.precio_total} ingredientes={pedido_completo} />
 
+    const [comida, setComida] = useState(true);
+    const [mostrar_comida, setMostrar_comida] = useState(<div></div>);
+    const [flecha_comida, setFlecha_comida] = useState(<span className="flechas">➘ ➘ ➘</span>)
+
+    
+    const [bebida, setBebida] = useState(true);
+    const [mostrar_bebida, setMostrar_bebida] = useState(<div></div>);    
+    const [flecha_bebida, setFlecha_bebida] = useState(<span className="flechas">➘ ➘ ➘</span>)
+    
+    function mostrar(que_mostrar){
+        console.log("funciona");
+        console.log(que_mostrar);
+        setBebida(!bebida);
+        console.log(bebida.cuerpo);
+
+        switch (que_mostrar) {
+            case 'bebida':
+                setBebida(!bebida);
+                if(bebida === true){
+                    setMostrar_bebida(bebidas);
+                    setFlecha_bebida(<span className="flechas" >➙ ➙ ➙</span>);
+                }
+                else{
+                    setMostrar_bebida(<div></div>);
+                    setFlecha_bebida(<span className="flechas" > ➘ ➘ ➘</span>);
+                }
+            break;
+        
+            case 'comida':
+                setComida(!comida);
+                if(comida === true){
+                    setMostrar_comida(platos);
+                    setFlecha_comida(<span className="flechas" >➙ ➙ ➙</span>);
+                }
+                else{
+                    setMostrar_comida(<div></div>);
+                    setFlecha_comida(<span className="flechas" >➘ ➘ ➘</span>);
+                }
+            break;
+
+            case 'postre':
+                setPostre(!postre);
+                if(postre === true){
+                    setMostrar_postre(postres);
+                    setFlecha_postre(<span className="flechas" >➙ ➙ ➙</span>);
+                }
+                else{
+                    setMostrar_postre(<div></div>);
+                    setFlecha_postre(<span className="flechas" >➘ ➘ ➘</span>);
+                }
+            break;
+        }
+    }
+
+    return(
+        <div className="pedido">
+            <span className="total">Total: ${precio_total}</span>
+
+            {/* <a href="/pedido" > <button className="boton_nuevo_inicio">Iniciar pedido desde O</button> </a> */}
+
+            <div className="titulos-con-flechas" onClick={()=>mostrar('bebida')} >
+                <h4 className="titulos" >Bebidas </h4> 
+                {flecha_bebida}
+            </div>
+            <div className="bebidas">
+                {mostrar_bebida}            
+            </div>
+        
+
+            <div className="titulos-con-flechas" onClick={()=>mostrar('comida')} >
+                <h4 className="titulos">Platos principales</h4>
+                {flecha_comida}
+            </div>
+            <div className="platos">
+                {mostrar_comida}
             </div>
 
-        );
-    }
+            <div className="titulos-con-flechas" onClick={()=>mostrar('postre')} >
+                <h4 className="titulos">Postres</h4>
+                {flecha_postre}
+            </div>
+            <div className="prostres">
+                {mostrar_postre}
+            </div>
+
+            <div className="listar_pedido">
+                {pedido_completo.map(ingredientes_elegidos =>
+                    <div className="ingredientes_elegidos">
+                        <li className="lista_pedido">{ingredientes_elegidos}</li> 
+                    </div>
+                )}
+            </div>
+            <Contactanos className="boton_contactanos" precio = {precio_total} ingredientes={pedido_completo} />
+
+        </div>
+
+    );
 }
+export default Pedido;
