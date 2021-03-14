@@ -9,10 +9,12 @@ let i = 0;
 const Pedido = () => {
     const [precio_total, setPrecio_total] = useState(0);
     // const [ingredientes_extras, setIngredientes_extras] = useState('');
-
+    let precio = 0;
+    
     function precio_del_pedido(e){
         console.log(e);
-        setPrecio_total(precio_total + e);
+        precio = precio + e;
+        setPrecio_total(precio);
     }
 
     function ingredientes_extras(e){
@@ -28,38 +30,41 @@ const Pedido = () => {
         i++;
         
     }
+
+    const bebidas =
+        <div>
+            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
+            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
+        </div>
+    
     const platos =
         <div>
             <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
             <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Burger"} foto={burger.img} precio={burger.precio} ingredientes={burger.ingredientes} />
-            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
         </div>;
 
-    const bebidas =
-        <div>
-            <h5>Bebidas</h5>
-        </div>
-    
     const postres = 
         <div>
-            <h7>Postres</h7>
+            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
+            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
+            <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Brownie"} foto={brownie.img} precio={brownie.precio} ingredientes={brownie.ingredientes} />
         </div>
 
 
+    const [bebida, setBebida] = useState(true);
+    const [mostrar_bebida, setMostrar_bebida] = useState(bebidas);    
+    const [flecha_bebida, setFlecha_bebida] = useState(<span className="flechas">➘ ➘ ➘</span>)
+
+    const [comida, setComida] = useState(true);
+    const [mostrar_comida, setMostrar_comida] = useState(platos);
+    const [flecha_comida, setFlecha_comida] = useState(<span className="flechas">➘ ➘ ➘</span>)
+
     const [postre, setPostre] = useState(true);
-    const [mostrar_postre, setMostrar_postre] = useState(<div></div>);
+    const [mostrar_postre, setMostrar_postre] = useState(postres);
     const [flecha_postre, setFlecha_postre] = useState(<span className="flechas">➘ ➘ ➘</span>)
 
 
-    const [comida, setComida] = useState(true);
-    const [mostrar_comida, setMostrar_comida] = useState(<div></div>);
-    const [flecha_comida, setFlecha_comida] = useState(<span className="flechas">➘ ➘ ➘</span>)
 
-    
-    const [bebida, setBebida] = useState(true);
-    const [mostrar_bebida, setMostrar_bebida] = useState(<div></div>);    
-    const [flecha_bebida, setFlecha_bebida] = useState(<span className="flechas">➘ ➘ ➘</span>)
-    
     function mostrar(que_mostrar){
         console.log("funciona");
         console.log(que_mostrar);
@@ -70,11 +75,11 @@ const Pedido = () => {
             case 'bebida':
                 setBebida(!bebida);
                 if(bebida === true){
-                    setMostrar_bebida(bebidas);
+                    setMostrar_bebida(<div></div>);
                     setFlecha_bebida(<span className="flechas" >➙ ➙ ➙</span>);
                 }
                 else{
-                    setMostrar_bebida(<div></div>);
+                    setMostrar_bebida(bebidas);
                     setFlecha_bebida(<span className="flechas" > ➘ ➘ ➘</span>);
                 }
             break;
@@ -82,11 +87,11 @@ const Pedido = () => {
             case 'comida':
                 setComida(!comida);
                 if(comida === true){
-                    setMostrar_comida(platos);
+                    setMostrar_comida(<div></div>);
                     setFlecha_comida(<span className="flechas" >➙ ➙ ➙</span>);
                 }
                 else{
-                    setMostrar_comida(<div></div>);
+                    setMostrar_comida(platos);
                     setFlecha_comida(<span className="flechas" >➘ ➘ ➘</span>);
                 }
             break;
@@ -94,11 +99,11 @@ const Pedido = () => {
             case 'postre':
                 setPostre(!postre);
                 if(postre === true){
-                    setMostrar_postre(postres);
+                    setMostrar_postre(<div></div>);
                     setFlecha_postre(<span className="flechas" >➙ ➙ ➙</span>);
                 }
                 else{
-                    setMostrar_postre(<div></div>);
+                    setMostrar_postre(postres);
                     setFlecha_postre(<span className="flechas" >➘ ➘ ➘</span>);
                 }
             break;

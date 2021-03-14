@@ -1,12 +1,13 @@
-
+body{
+    background-image: url(../../Imagenes/pizza-fondo.jpg);
+    background-attachment: fixed;
+}
 .boton_nuevo_inicio {
     position: fixed ;
     font-family: 'Akaya Telivigala', cursive;
 	margin-top: 5px;
     margin-left: 5px;
     border-radius: 0px 25px 25px ;
-    /* background: #e53935; */
-    /* background: linear-gradient(to left, #e53935 , #e35d5b);  */
     background: linear-gradient(to left, #53C7E3 , #A1E3F3); 
 	border-color: #A1E3F3;
 
@@ -16,15 +17,6 @@
 	font-size: 18px;
 }
 
-
-/* .boton_nuevo_inicio{
-    margin-top: 5px;
-    margin-left: 5px;
-    padding: 5px 15px 5px 15px;
-    border-radius: 0px 25px 25px ;
-} */
-
-
 .titulos-con-flechas{
     margin-top: 70px;
     display: flex;
@@ -32,6 +24,7 @@
     align-items: center;
 }
 .titulos{
+    font-size: 21px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,9 +48,12 @@
     font-size: 25px;
 }
 .titulos{
+    color: white;
+    font-family: 'Redressed', cursive;
+    /* text-decoration: underline black; */
     display: flex;
+    font-size: 28px;
     justify-content: center;
-    font-family: 'Courier New', Courier, monospace;    
 }
 
 .listar_pedido{
