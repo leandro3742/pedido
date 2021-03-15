@@ -1,4 +1,7 @@
 /*NECESARIO NO TOCAR*/
+img.cover{
+    object-fit: cover;
+}
 span{
     font-family: 'RocknRoll One', sans-serif;
     color: white;

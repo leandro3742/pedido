@@ -3,7 +3,7 @@ body{
     background-attachment: fixed;
 }
 .boton_nuevo_inicio {
-    position: fixed ;
+    /* position: fixed ; */
     font-family: 'Akaya Telivigala', cursive;
 	margin-top: 5px;
     margin-left: 5px;
@@ -33,7 +33,8 @@ body{
     margin-left: 5px;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
-    top: 2.5%;
+    top: 10%;
+    left: 1%;
     padding: 10px 15px 10px 15px;
     border-radius: 5px 25px 25px 5px;
     border: outset;
@@ -50,19 +51,29 @@ body{
 .titulos{
     color: white;
     font-family: 'Redressed', cursive;
-    /* text-decoration: underline black; */
     display: flex;
     font-size: 28px;
     justify-content: center;
 }
-
-.listar_pedido{
+#listar_pedido{
     margin-top: 15px;
     margin-bottom: 75px;
+    /* width: 90%; */
     border-radius: 25px 5px 25px;
     background-color: rgba(0, 0, 0, 0.7);
-}
-.lista_pedido{
-    margin: 10px;
+    /* position: fixed; */
+    /* bottom: 10%; */
+    /* margin: 10px; */
     text-align: center;
+}
+
+.container-flecha_abajo{    
+    padding: 3px 7.5px 3px 7.5px;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.flecha_abajo{
+    width: 52px;
 }

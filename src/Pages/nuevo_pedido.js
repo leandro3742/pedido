@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+import flecha_abajo from "../Imagenes/iconos/flecha_abajo.png";
 import { pizza, burger, brownie } from './datos';
 import COMIDA from '../Componentes/Pedido';
 import Contactanos from '../Componentes/Contactanos';
@@ -8,7 +10,6 @@ let i = 0;
 
 const Pedido = () => {
     const [precio_total, setPrecio_total] = useState(0);
-    // const [ingredientes_extras, setIngredientes_extras] = useState('');
     let precio = 0;
     
     function precio_del_pedido(e){
@@ -30,7 +31,7 @@ const Pedido = () => {
         i++;
         
     }
-
+    
     const bebidas =
         <div>
             <COMIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto = {"Pizza"} foto={pizza.img} precio={pizza.precio} ingredientes={pizza.ingredientes} />
@@ -66,11 +67,7 @@ const Pedido = () => {
 
 
     function mostrar(que_mostrar){
-        console.log("funciona");
-        console.log(que_mostrar);
         setBebida(!bebida);
-        console.log(bebida.cuerpo);
-
         switch (que_mostrar) {
             case 'bebida':
                 setBebida(!bebida);
@@ -112,9 +109,9 @@ const Pedido = () => {
 
     return(
         <div className="pedido">
-            <span className="total">Total: ${precio_total}</span>
 
-            {/* <a href="/pedido" > <button className="boton_nuevo_inicio">Iniciar pedido desde O</button> </a> */}
+            <span className="total">Total: ${precio_total}</span>
+            <a href="/pedido" > <button className="boton_nuevo_inicio">Iniciar pedido desde O</button> </a>
 
             <div className="titulos-con-flechas" onClick={()=>mostrar('bebida')} >
                 <h4 className="titulos" >Bebidas </h4> 
@@ -141,14 +138,19 @@ const Pedido = () => {
                 {mostrar_postre}
             </div>
 
-            <div className="listar_pedido">
+            <div id="listar_pedido">
                 {pedido_completo.map(ingredientes_elegidos =>
                     <div className="ingredientes_elegidos">
                         <li className="lista_pedido">{ingredientes_elegidos}</li> 
                     </div>
                 )}
             </div>
-            <Contactanos className="boton_contactanos" precio = {precio_total} ingredientes={pedido_completo} />
+            
+            <a href="/pedido#listar_pedido" className="container-flecha_abajo">
+                    <img  className="flecha_abajo" src={flecha_abajo} alt="" />
+            </a>
+
+            <Contactanos id="boton_enviar" precio = {precio_total} ingredientes={pedido_completo} />
 
         </div>
 
