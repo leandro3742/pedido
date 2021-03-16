@@ -4,9 +4,13 @@ import flecha_abajo from "../Imagenes/iconos/flecha_abajo.png";
 import { pizza, burger, brownie } from './datos';
 import COMIDA from '../Componentes/Pedido';
 import Contactanos from '../Componentes/Contactanos';
+import Guardar_mesa from '../Componentes/Guardar_mesa';
 import './Styles/Componentes.css';
+
+
 let pedido_completo = [];
 let i = 0;
+
 
 const Pedido = () => {
     const [precio_total, setPrecio_total] = useState(0);
@@ -105,10 +109,24 @@ const Pedido = () => {
                 }
             break;
         }
+    };
+
+    const [PEDIDO, setPedido] = useState('no_mostrar_pedido');
+    const [MESA, setMESA] = useState("mostrar_mesa");
+    const [mesa, setMesa] = useState("unde");
+    function guardar_mesa(e){
+        setPedido("mostrar_pedido");
+        setMESA("no_mostrar_mesa");
+        setMesa(e);
+        // console.log("Mesa numero:" + e);
     }
 
     return(
-        <div className="pedido">
+        <React.Fragment>
+            <div className={MESA}>
+               <Guardar_mesa guardar_mesa={guardar_mesa} />
+            </div>        
+        <div className={PEDIDO}>
 
             <span className="total">Total: ${precio_total}</span>
             <a href="/pedido" > <button className="boton_nuevo_inicio">Iniciar pedido desde O</button> </a>
@@ -150,9 +168,10 @@ const Pedido = () => {
                     <img  className="flecha_abajo" src={flecha_abajo} alt="" />
             </a>
 
-            <Contactanos id="boton_enviar" precio = {precio_total} ingredientes={pedido_completo} />
+            <Contactanos id="boton_enviar" mesa={mesa} precio={precio_total} ingredientes={pedido_completo} />
 
         </div>
+        </React.Fragment>
 
     );
 }

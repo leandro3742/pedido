@@ -2,6 +2,26 @@ body{
     background-image: url(../../Imagenes/pizza-fondo.jpg);
     background-attachment: fixed;
 }
+
+
+.mostrar_mesa{
+    /* height: 500px; */
+    display: grid;
+    justify-content: center;
+}
+.ingresar_la_mesa{
+    margin-top: 150px;
+}
+.boton_ingresar_la_mesa{
+    height: 50px;
+}
+
+.no_mostrar_pedido, .no_mostrar_mesa{
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
 .boton_nuevo_inicio {
     /* position: fixed ; */
     font-family: 'Akaya Telivigala', cursive;

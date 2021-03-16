@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
 export default function ContactUs(props) {
   console.log('props:'+ props.ingredientes);
   console.log('precio:' + props.precio);
+  console.log('mesa: '+ props.mesa);
   
   function sendEmail(e) {
     e.preventDefault();
@@ -31,8 +32,8 @@ export default function ContactUs(props) {
 
   return (
     <div>
-      
       <form className="container-boton" onSubmit={sendEmail}>
+        <input type="hidden" name="mesa" value={props.mesa}/>
         <input type="hidden" name="pedido" value={props.ingredientes}/>
         <input type="hidden" name="precio" value={props.precio}/>
         
