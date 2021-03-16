@@ -2,6 +2,7 @@
     display: grid;
     height: 500px;
 }
+
 .formulario_mesa{
     display: grid;
     justify-content: center;
@@ -18,7 +19,7 @@
     color: whitesmoke;
     outline: none;
 }
-.boton{
+.boton_form{
     margin-left: calc(50% - 75px);
     width: 150px;
     margin-top: -150px;
