@@ -1,8 +1,11 @@
 import img_pizza from '../Imagenes/pizza.jpg';
 import img_burger from '../Imagenes/hamburguesa.jpg';
+
 import img_brownie from '../Imagenes/brownie.png';
+
 import img_pepsi_chica from '../Imagenes/pepsi_chica.jpg';
-import img_mirinda_chica from '../Imagenes/mirinda_chica.jpg';
+import img_mirinda_grande from '../Imagenes/mirinda_grande.jpg';
+import img_paso_de_los_toros_grande from '../Imagenes/paso_de_los_toros.jpg';
 
 //PLATOS PRINCIPALES//
 let ingredientes_pizza = {
@@ -41,15 +44,22 @@ export let brownie = {
 export let pepsi_chica = {
     nombre: 'Pepsi 600ml',
     img: img_pepsi_chica,
-    precio: 60,
+    precio: 70,
     ingredientes: false
 }
 
-export let mirinda_chica = {
-    nombre: 'Mirinda 600ml',
-    img: img_mirinda_chica,
-    precio: 60,
+export let paso_de_los_toros_grande = {
+    nombre: 'Paso 1.2L',
+    img: img_paso_de_los_toros_grande,
+    precio: 120,
     ingredientes: false
 }
 
-export const productos = [pizza, burger, brownie, pepsi_chica];
+export let mirinda_grande = {
+    nombre: 'Mirinda 1.2L',
+    img: img_mirinda_grande,
+    precio: 120,
+    ingredientes: false
+}
+
+export const productos = [pizza, burger, brownie, pepsi_chica, paso_de_los_toros_grande, mirinda_grande];

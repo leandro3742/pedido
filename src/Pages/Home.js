@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import flecha_abajo from "../Imagenes/iconos/flecha_abajo.png";
-import { pizza, burger, brownie, pepsi_chica,mirinda_chica } from './datos';
+import { pizza, burger, brownie, pepsi_chica,mirinda_grande, paso_de_los_toros_grande } from './datos';
 import COMIDA from '../Componentes/Comida';
 import BEBIDA from '../Componentes/Bebida';
 import Contactanos from '../Componentes/Contactanos';
@@ -39,7 +39,9 @@ const Pedido = () => {
     const bebidas =
         <div>
             <BEBIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto = {"Pepsi 600ml"} foto={pepsi_chica.img} precio={pepsi_chica.precio} ingredientes={pepsi_chica.ingredientes} />
-            <BEBIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Mirinda 600ml"} foto={mirinda_chica.img} precio={mirinda_chica.precio} ingredientes={mirinda_chica.ingredientes} />
+            <BEBIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Mirinda 1.2L"} foto={mirinda_grande.img} precio={mirinda_grande.precio} ingredientes={mirinda_grande.ingredientes} />
+            <BEBIDA ingredientes_extras={ingredientes_extras} precio_del_pedido={precio_del_pedido} nombre_del_producto={"Paso 1.2L"} foto={paso_de_los_toros_grande.img} precio={paso_de_los_toros_grande.precio} ingredientes={paso_de_los_toros_grande.ingredientes} />
+
         </div>
     
     const platos =
