@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 
 import Layout from './Componentes/layout';
 import Home from './Pages/Home';
-import Pedido from './Pages/nuevo_pedido';
 import './App.css';
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
         <Layout >
           <Switch>
             <Route exact path="/" component={Home} /> 
-            <Route exact path="/pedido" component={Pedido} />           
           </Switch>
         </ Layout>
       </BrowserRouter>

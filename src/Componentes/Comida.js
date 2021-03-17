@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Styles/Pedido.css';
+import './Styles/Comida.css';
 
 import add from '../Imagenes/iconos/add.png';
 import carro from '../Imagenes/iconos/carro.png';
@@ -9,7 +9,7 @@ import less from '../Imagenes/iconos/less.png';
 let ingredientes_guardados = [];
 let precio_total = 0;
 
-const Pedido = (props) => {
+const Comida = (props) => {
     const [nombre_del_producto, setNombre_del_producto] = useState(props.nombre_del_producto);
     const [imagen, setImagen] = useState(props.foto);
     const precio_inicial = props.precio;
@@ -153,7 +153,7 @@ const Pedido = (props) => {
             </div>
     )
 }
-export default Pedido;
+export default Comida;
 
 
 

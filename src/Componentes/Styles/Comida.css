@@ -6,11 +6,18 @@ span{
     font-family: 'RocknRoll One', sans-serif;
     color: white;
 }
-.pedido-imagen.cover{
+.pedido-imagen.cover, .pedido-imagen-bebidas.cover{
     object-fit: cover;
 }
 .pedido-imagen{
     width: 150px;
+}
+.pedido-imagen-bebidas{
+    height: 150px;
+}
+.pedido-imagen-bebida{
+    /* height: 50px; */
+    width: 50px;
 }
 .icono{
     margin-left: 10px;
