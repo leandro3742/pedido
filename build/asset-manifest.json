@@ -1,27 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.a6388084.chunk.css",
-    "main.js": "/static/js/main.8f2adfa1.chunk.js",
-    "main.js.map": "/static/js/main.8f2adfa1.chunk.js.map",
+    "main.css": "/static/css/main.614d3be2.chunk.css",
+    "main.js": "/static/js/main.74d1ffb0.chunk.js",
+    "main.js.map": "/static/js/main.74d1ffb0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0a073d26.js",
     "runtime-main.js.map": "/static/js/runtime-main.0a073d26.js.map",
     "static/js/2.6fc80ac8.chunk.js": "/static/js/2.6fc80ac8.chunk.js",
     "static/js/2.6fc80ac8.chunk.js.map": "/static/js/2.6fc80ac8.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a6388084.chunk.css.map": "/static/css/main.a6388084.chunk.css.map",
+    "static/css/main.614d3be2.chunk.css.map": "/static/css/main.614d3be2.chunk.css.map",
     "static/js/2.6fc80ac8.chunk.js.LICENSE.txt": "/static/js/2.6fc80ac8.chunk.js.LICENSE.txt",
     "static/media/brownie.03788d86.png": "/static/media/brownie.03788d86.png",
     "static/media/hamburguesa.8d0b876f.jpg": "/static/media/hamburguesa.8d0b876f.jpg",
     "static/media/mirinda_grande.13c717a1.jpg": "/static/media/mirinda_grande.13c717a1.jpg",
     "static/media/paso_de_los_toros.f4b24db7.jpg": "/static/media/paso_de_los_toros.f4b24db7.jpg",
     "static/media/pepsi_chica.0bd00ffb.jpg": "/static/media/pepsi_chica.0bd00ffb.jpg",
-    "static/media/Componentes.css": "/static/media/pizza-fondo.8a936a8f.jpg",
     "static/media/pizza.8fbbd3f0.jpg": "/static/media/pizza.8fbbd3f0.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.0a073d26.js",
     "static/js/2.6fc80ac8.chunk.js",
-    "static/css/main.a6388084.chunk.css",
-    "static/js/main.8f2adfa1.chunk.js"
+    "static/css/main.614d3be2.chunk.css",
+    "static/js/main.74d1ffb0.chunk.js"
   ]
 }

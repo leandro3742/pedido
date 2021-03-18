@@ -1,5 +1,5 @@
-.layo{
-    /* background: linear-gradient(to bottom, #A6ABAD, #3C3F40, #22718C);  */
+body{
+    background-color: black;
     /* background-image: url(../../Imagenes/fondo.JPG); */
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
 }

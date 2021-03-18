@@ -6,6 +6,7 @@ import COMIDA from '../Componentes/Comida';
 import BEBIDA from '../Componentes/Bebida';
 import Contactanos from '../Componentes/Contactanos';
 import Guardar_mesa from '../Componentes/Guardar_mesa';
+import Header from '../Componentes/Header';
 import './Styles/Componentes.css';
 
 let pedido_completo = [];
@@ -125,6 +126,7 @@ const Pedido = () => {
 
     return(
         <React.Fragment>
+            <Header />
             <div className={MESA}>
                <Guardar_mesa guardar_mesa={guardar_mesa} />
             </div>        
@@ -166,7 +168,7 @@ const Pedido = () => {
                 )}
             </div>
             
-            <a href="/pedido#listar_pedido" className="container-flecha_abajo">
+            <a href="/#listar_pedido" className="container-flecha_abajo">
                     <img  className="flecha_abajo" src={flecha_abajo} alt="" />
             </a>
 

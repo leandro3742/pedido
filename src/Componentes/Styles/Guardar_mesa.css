@@ -1,6 +1,6 @@
 .contenedor_form{
     display: grid;
-    height: 500px;
+    /* height: 500px; */
 }
 
 .formulario_mesa{
@@ -10,11 +10,9 @@
 }
 .label{
     font-size: 21px;
-    margin-top: 75%;
+    /* margin-top: 75%; */
 }
 .opciones{
-    margin-top: -80px;
-    /* background: linear-gradient(to top, #53C7E3 , #A1E3F3);  */
     background-color: black;
     color: whitesmoke;
     outline: none;
@@ -22,7 +20,7 @@
 .boton_form{
     margin-left: calc(50% - 75px);
     width: 150px;
-    margin-top: -150px;
+    margin-top: 10px;
     background: linear-gradient(to top, #53C7E3 , #A1E3F3); 
     border-color: #A1E3F3;
     outline: none;
