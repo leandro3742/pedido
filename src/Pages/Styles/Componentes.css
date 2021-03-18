@@ -4,7 +4,8 @@
 	margin-top: 5px;
     margin-left: 5px;
     border-radius: 0px 25px 25px ;
-    background: linear-gradient(to left, #53C7E3 , #A1E3F3); 
+    background: linear-gradient(to left, #000000 , #0000); 
+    /* background: linear-gradient(to left, #53C7E3 , #A1E3F3);  */
 	border-color: #A1E3F3;
 
 	outline: none;
