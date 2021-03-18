@@ -1,7 +1,4 @@
 .contenedor-boton{
-    /* position: fixed; */
-    /* top: 90%; */
-    /* left: 30%; */
     display: flex;
     justify-content: center;
 }

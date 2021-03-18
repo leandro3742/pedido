@@ -10,7 +10,7 @@ import less from '../Imagenes/iconos/less.png';
 let ingredientes_guardados = [];
 let precio_total = 0;
 
-const Bebida = (props) => {
+const Postre = (props) => {
     const nombre_del_producto = props.nombre_del_producto;
     const imagen = props.foto;
     const precio =props.precio;
@@ -29,14 +29,14 @@ const Bebida = (props) => {
     const { ingredientes_extras } = props;
 
     return(
-        <div className="contenedor-bebida">
-            <div className="imagen-precio">
-                <img className="pedido-imagen-bebidas" src={imagen} alt=""/>
-                <div className="precio-bebida"> <span>${precio}</span> </div>
+        <div className="pedido-mini-container">
+            <div className="arriba">
+                <img className="pedido-imagen" src={imagen} alt=""/>
+                <img className="icono" src={carro} onClick={()=>cerrar_ingredientes()}/>
             </div>
-            <img className="icono" src={carro} onClick={()=>cerrar_ingredientes()}/>
-        </div>                
+            <div className="precio"> <span>${precio}</span> </div>
+        </div>               
     )
 
 }
-export default Bebida;
+export default Postre;

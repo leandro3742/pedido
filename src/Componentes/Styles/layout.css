@@ -1,5 +1,6 @@
 body{
-    background-color: black;
+    /* background-color: #A8ACAD; */
+    background: linear-gradient(to bottom, #53C7E3 , #0000); 
     /* background-image: url(../../Imagenes/fondo.JPG); */
     background-attachment: fixed;
 }
