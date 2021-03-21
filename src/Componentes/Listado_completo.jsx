@@ -35,10 +35,8 @@ const Listado_completo = (props) => {
             array.splice(1, 0, ' con: ');
 
         while(f < array.length){
-            if(array[f] === undefined){
-                f++;
-            }
-            PEDIDO = PEDIDO + array[f];
+            if(array[f] !== undefined)
+                PEDIDO = PEDIDO + array[f];
             f++;
         }
         PEDIDO = PEDIDO + ' // ';
