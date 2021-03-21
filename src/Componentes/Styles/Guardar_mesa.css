@@ -1,5 +1,8 @@
 .contenedor_form{
+    margin-top: 125px;
     display: grid;
+    justify-content: center;
+    align-items: center;
     /* height: 500px; */
 }
 
@@ -21,8 +24,10 @@
     margin-left: calc(50% - 75px);
     width: 150px;
     margin-top: 10px;
-    background: linear-gradient(to top, #53C7E3 , #A1E3F3); 
-    border-color: #A1E3F3;
+    color: whitesmoke;  
+    background: linear-gradient(to right, #FF0000  , #000000); 
+    /* background: linear-gradient(to top, #53C7E3 , #A1E3F3);  */
+    border-color: linear-gradient(to right #FF0000, #000000);
     outline: none;
     padding: 5px 10px 5px 10px;
     border-radius: 15px 55px 15px 55px;
