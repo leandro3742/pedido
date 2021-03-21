@@ -9,7 +9,7 @@ import img_paso_de_los_toros_grande from '../Imagenes/paso_de_los_toros.jpg';
 
 //PLATOS PRINCIPALES//
 let ingredientes_pizza = {
-    nombres : ['  Bacon', '  Aceitunas', '  Huevos' , "  Extra queso"],
+    nombres : ['bacon ', 'aceitunas ', 'huevos ' , 'extra queso '],
     precio : [40, 50, 60, 70 ]
 }   
 
@@ -21,7 +21,7 @@ export const pizza = {
 }
 
 let ingredientes_burger = {
-    nombres : ['  Extra carne' , '  Extra queso', '  Mayonesa', '  Ketchup', '  Mostaza'],
+    nombres : ['extra carne ' , 'extra queso ', 'mayonesa ', 'ketchup ', 'mostaza '],
     precio : [50, 25, 0, 0, 0]
 }
 

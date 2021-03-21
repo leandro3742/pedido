@@ -12,7 +12,7 @@ import '../Pages/Styles/Componentes.css';
 
 let pedido_completo = [];
 let i = 0;
-
+let PEDIDO = '';
 
 const Listado_completo = (props) => {
     const [precio_total, setPrecio_total] = useState(0);
@@ -25,16 +25,25 @@ const Listado_completo = (props) => {
     }
     function ingredientes_extras(e){
         let array = [];
+        let f = 0;
+        let esta = '';
         array = e;
         if (array.length === 1)
-            array.splice(0, 0, '1  ');
+            array.splice(0, 0, ' 1 ');
         
         else
-            array.splice(1, 0, '  con : ');
-        
+            array.splice(1, 0, ' con: ');
+
+        while(f < array.length){
+            if(array[f] === undefined){
+                f++;
+            }
+            PEDIDO = PEDIDO + array[f];
+            f++;
+        }
+        PEDIDO = PEDIDO + ' // ';
         pedido_completo[i] = array; 
         i++;
-        
     }
     
     const bebidas =
@@ -156,10 +165,10 @@ const Listado_completo = (props) => {
             </div>
             
             <a href="/#listar_pedido" className="container-flecha_abajo">
-                    <img  className="flecha_abajo" src={flecha_abajo} alt="" />
+                <img  className="flecha_abajo" src={flecha_abajo} alt="" />
             </a>
-
-            <Contactanos id="boton_enviar" mesa={mesa} precio={precio_total} ingredientes={pedido_completo} />
+            {/* pedido_completo */}
+            <Contactanos id="boton_enviar" mesa={mesa} precio={precio_total} ingredientes={PEDIDO} />
             <div className="contenedor-total"> <span className="total">Total: ${precio_total}</span> </div>
 
         </div>

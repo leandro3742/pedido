@@ -9,7 +9,7 @@ export default function ContactUs(props) {
   console.log('props:'+ props.ingredientes);
   console.log('precio:' + props.precio);
   console.log('mesa: '+ props.mesa);
-  
+    
   function sendEmail(e) {
     e.preventDefault();
     emailjs.sendForm('service_3hvrpn7', 'template_48gqdhi', e.target, 'user_aVcs1Bw08xidonpvb7rrl')
