@@ -26,18 +26,17 @@
     justify-content: center;
     align-items: center;
 }
+.contenedor-total{
+    display: flex;
+    justify-content: center;
+}
 .total{
     color: white;
-    margin-left: 5px;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
-    /* top: 175px; */
-    /* bottom: 55px; */
     bottom: 10px;
-    left: 75px;
     padding: 10px 15px 10px 15px;
     border-radius: 20px;
-    /* border-radius: 5px 25px 25px 5px; */
     border: outset;
 
     display: flex;

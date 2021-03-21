@@ -120,7 +120,6 @@ const Listado_completo = (props) => {
         <React.Fragment>   
         <div className='mostrar_pedido'>
 
-            <span className="total">Total: ${precio_total}</span>
             <a href="/" > <button className="boton_nuevo_inicio">Iniciar pedido desde O</button> </a>
             
             <div className="titulos-con-flechas" onClick={()=>mostrar('bebida')} >
@@ -161,6 +160,7 @@ const Listado_completo = (props) => {
             </a>
 
             <Contactanos id="boton_enviar" mesa={mesa} precio={precio_total} ingredientes={pedido_completo} />
+            <div className="contenedor-total"> <span className="total">Total: ${precio_total}</span> </div>
 
         </div>
         </React.Fragment>
