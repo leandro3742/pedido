@@ -31,12 +31,13 @@
     margin-left: 5px;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
-    /* top: 10%; */
-    /* top: 115px; */
-    bottom: 40px;
-    left: 1%;
+    /* top: 175px; */
+    /* bottom: 55px; */
+    bottom: 10px;
+    left: 75px;
     padding: 10px 15px 10px 15px;
-    border-radius: 5px 25px 25px 5px;
+    border-radius: 20px;
+    /* border-radius: 5px 25px 25px 5px; */
     border: outset;
 
     display: flex;
@@ -57,20 +58,17 @@
 }
 #listar_pedido{
     margin-top: 15px;
-    margin-bottom: 75px;
-    /* width: 90%; */
+    margin-bottom: 15px;
     border-radius: 25px 5px 25px;
     background-color: rgba(0, 0, 0, 0.7);
-    /* position: fixed; */
-    /* bottom: 10%; */
-    /* margin: 10px; */
     text-align: center;
 }
 
 .container-flecha_abajo{    
     padding: 3px 7.5px 3px 7.5px;
+    border-radius: 15px;
     position: fixed;
-    bottom: 5%;
+    bottom: 12%;
     right: 5%;
     background-color: rgba(0, 0, 0, 0.7);
 }
