@@ -31,7 +31,7 @@ const Bebida = (props) => {
     return(
         <div className="contenedor-bebida">
             <div className="imagen-precio">
-                <img className="pedido-imagen-bebidas" src={imagen} alt=""/>
+                <img className="pedido-imagen-bebidas" src={imagen} onClick={()=>cerrar_ingredientes()} alt=""/>
                 <div className="precio-bebida"> <span>${precio}</span> </div>
             </div>
             <img className="icono" src={carro} onClick={()=>cerrar_ingredientes()}/>

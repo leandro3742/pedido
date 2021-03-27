@@ -293,8 +293,8 @@ export default class Comida extends React.Component {
                 <div>
                     <div className="pedido-mini-container">
                         <div className="arriba">
-                            <img className="pedido-imagen" src={this.state.imagen} alt=""/>
-                            <img className="icono" src={carro} onClick={()=>this.mostrar_pedido()}/>
+                            <img className="pedido-imagen" src={this.state.imagen} onClick={()=>this.mostrar_pedido()} alt=""/>
+                            <img className="icono" src={carro} onClick={()=>this.mostrar_pedido()} alt=""/>
                         </div>
                         <div className="precio"> <span>${this.state.precio}</span> </div>
                     </div>

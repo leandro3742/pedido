@@ -31,7 +31,7 @@ const Postre = (props) => {
     return(
         <div className="pedido-mini-container">
             <div className="arriba">
-                <img className="pedido-imagen" src={imagen} alt=""/>
+                <img className="pedido-imagen" src={imagen} onClick={()=>this.mostrar_pedido()} alt=""/>
                 <img className="icono" src={carro} onClick={()=>cerrar_ingredientes()}/>
             </div>
             <div className="precio"> <span>${precio}</span> </div>
